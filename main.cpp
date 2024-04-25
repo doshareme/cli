@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
   command += argv[1];
   command += " ";
   command += argv[2];
-
+  command += " -o result.json";
   std::cout << "Executing: " << command << std::endl;
 
   int result = system(command.c_str());
@@ -22,6 +22,6 @@ int main(int argc, char* argv[]) {
     std::cerr << "curl command failed with code: " << result << std::endl;
     return 1;
   }
-  std::cout << "File upload successful!" << result<< std::endl;
+  std::cout << "File upload successful!" <<  << std::endl;
   return 0;
 }
