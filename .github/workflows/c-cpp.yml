@@ -13,10 +13,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: build
+    - name: build x64
       run: g++ main.cpp -o doshare
+    - name: build ar
+    - uses: pguyot/arm-runner-action@v2
+      with:
+        commands: g++ main.cpp -o doshare_arm
     - name: Upload a Build Artifact
-          
       uses: actions/upload-artifact@v4.3.3
       with:
         path: doshare
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        path: doshare_arm
+        
