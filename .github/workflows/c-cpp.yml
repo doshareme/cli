@@ -18,12 +18,16 @@ jobs:
     - uses: pguyot/arm-runner-action@v2
       with:
           base_image: raspios_lite:2022-04-04
-          commands: ls
-            
-    - name: build arm
-      run:  g++ main.cpp -o doshare_arm
+          commands: g++ main.cpp -o doshare_arm
+          
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
       with:
         path: doshare
+               
+    - name: Upload a Build Artifact02
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        path: doshare_arm
         
+
