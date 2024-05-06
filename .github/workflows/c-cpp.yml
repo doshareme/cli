@@ -15,10 +15,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: build x64
       run: g++ main.cpp -o doshare
-    - name: build ar
+    - name: setup arm
     - uses: pguyot/arm-runner-action@v2
       with:
-        commands: g++ main.cpp -o doshare_arm
+          base_image: raspios_lite:2022-04-04
+    - name: build arm
+      run:  g++ main.cpp -o doshare_arm
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
       with:
