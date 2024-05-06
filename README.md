@@ -11,6 +11,7 @@ Run the file in any location
 ```bash
 doshare <filename> **<your_doshare_instance_url>
 ```
+Note: Currently Slugs are saved in result.json(we're looking to improve the experience)
 If instance url is not provided it will default to doshare.me's official server and provide a slug.
 
 Then your file will be availble at ```go.doshare.me/<slug>/<filename>```
