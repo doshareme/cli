@@ -3,6 +3,8 @@ Native Command Line File Upload Utility
 
 <sub>Link to source code for DoShare [server](https://github.com/doshareme/src)</sub>
 
+
+Packages are now also available at [PackageCloud](https://packagecloud.io/betacotech/doshare)
 ## How to use
 Download the latest binary release for your OS and arch from [releases](https://github.com/doshareme/cli/releases).
 
