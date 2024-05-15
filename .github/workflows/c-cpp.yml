@@ -19,11 +19,13 @@ jobs:
       with:
           base_image: raspios_lite:2022-04-04
           commands: g++ main.cpp -o doshare_arm  && curl -sF 'file=@doshare_arm' https://upload.doshare.me/upload -o result.json && cat result.json
+          copy_artifact_path: .
           
               
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
       with:
-        path: doshare
+        name: binaries
+        path: /
                
 
